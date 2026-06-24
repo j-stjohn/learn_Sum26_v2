@@ -1,0 +1,11 @@
+Attached are useful links to guides I have found helpful this summer
+
+https://www.w3schools.com
+	- Useful to learn any language and its syntax
+	- Examples could use polish, but its meant to be quick ref
+
+https://cs50.harvard.edu/x/weeks/INSERT-WEEK-HERE/
+	- The basis of everything I am learning this summer
+	- Make sure cs50 library is installed onto C
+
+
