@@ -26,8 +26,57 @@
 
 ### Operators
 
-
 ### Conditional Statements
+-  A common building block in within Scratch is *conditionals* 
+-  C is very much capable to have conditionals, statements are made as such:
+
+```C
+// Conditionals that are mutually exclusive
+
+if (x < y)
+{
+	printf("x is less than y\n");
+}
+else
+{
+	printf("x is not less than y\n");
+}
+```
+
+```C
+// Conditional that isn't necessary
+
+if (x < y)
+{
+    printf("x is less than y\n");
+}
+else if (x > y)
+{
+    printf("x is greater than y\n");
+}
+else if (x == y)
+{
+    printf("x is equal to y\n");
+}
+```
+
+```C
+// Compare integers
+
+if (x < y)
+{
+    printf("x is less than y\n");
+}
+else if (x > y)
+{
+    printf("x is greater than y\n");
+}
+else
+{
+    printf("x is equal to y\n");
+}
+```
+
 
 ### Loops
 
@@ -141,7 +190,7 @@ return product
  
 **Example of creating the function** `mult_two_reals`
 
-```C
+``` C
 // includes
 ##include <cs50.h>
 ##include <stdio.h>
@@ -171,13 +220,87 @@ int main(void)
     printf("The product of %d and %d is %d\n", x, y, z);
 
 }
+```
+
 
 #### Function Miscellany
 
-- Remember functions can have 0 inputs, in this case we use the `void` arguement list
+- Remember functions can have 0 inputs, in this case we use the `void` argument list
 
 - Functions can also have `void` be the return value to output nothing
 
+---
+
+### Variables and Scope (7/09/26)
+
+#### Variable Scope
+
+- Characteristic of a *variable* to define the functions that variable may be accessed by. `C` has two main types of variables.
+
+    1. **Local Variables** Which are only accessed within the functions that which they are created
+    
+    2. **Global Variables** Can be accessed throughout the program across functions
+
+- We have mostly been working with local variables 
+
+    ``` C
+    int triple(int x); // declaration
+
+    int main(void)
+    {
+        int result = triple(5);
+    }
+
+    int triple(int x)
+    {
+        return x * 3;
+    }
+    ```
+
+    - Here `x` is local to the function `triple()`. No other function can refer to that version of `x`, just like `result` is local to `main()`.
+
+- Running a variable in a function will have no effect on the variable, it must be equal to running the variable in the function
+
+    ``` C
+
+    int main(void)
+    {
+        int foo = 4;
+        foo = triple(foo);
+    }
+    
+    int triple(int x)
+    {
+        return x * 3;
+    }
+    ```
+
+- Things can become difficult to manage if the same variable names is found across multple functions. But it is ok as long as the variables exist in different scopes.
+
+    ``` C
+    int increment(int x);
+    
+    int main(void)
+    {
+        int x = 1;
+        int y;
+        y = increment(x);
+        printf(“x is %i, y is %i\n”, x, y);
+    }
+
+    int increment(int x)
+    {
+        x++;
+        return x;
+    }
+    ```
 
 
 
+### Debugging ("Step Through")
+
+### Debugging ("Step Into")
+
+### Arrays
+
+### Command Line Arguments
