@@ -1,0 +1,11 @@
+sort1 uses: Bubble
+
+How do you know?: It is the only one not assigned
+
+sort2 uses: Merge Sort
+
+How do you know?: Its the fastest of the sorting methods
+
+sort3 uses: Selection Sort
+
+How do you know?: sort3 is the slowest overall to sort
