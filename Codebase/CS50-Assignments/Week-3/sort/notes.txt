@@ -1,0 +1,37 @@
+sort1
+	- random5000.txt:  0.071 s
+	
+	- random10000.txt: 0.275 s
+
+	- random50000.txt: 5.813 s
+
+sort2
+	- random5000.txt: 0.042  s
+		
+	- random10000.txt: 0.190 s
+
+	- random50000.txt: 0.963 s
+
+sort3
+	- random5000.txt:  0.092 s
+		
+	- random10000.txt: 0.149 s
+
+	- random50000.txt: 3.321 s
+
+
+sort1
+	- sorted5000.txt:  0.043 s 
+
+	- sorted10000.txt: 0.296 s
+
+	- sorted50000.txt: 0.886 s
+
+sort2
+	- sorted5000.txt:  0.046 s
+
+	- sorted10000.txt: 0.073 s
+
+	- sorted50000.txt: 0.835 s
+
+
